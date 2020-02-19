@@ -1,0 +1,37 @@
+Rcode:
+=====
+
+#initialize multiple value
+
+mard_generator<- R6Class("Marks", private = c(name=NA,marks=NA),
+                         public=list(
+                           initialize=function(x,y)
+                             {
+                             private$name=x
+                             private$marks=y
+                           } 
+                           )
+                       )
+
+
+marks_1 <- mard_generator$new(c("john","sam","lucky","amy"),c(100,100,100,100))
+
+Console:
+=======
+
+> mard_generator<- R6Class("Marks", private = c(name=NA,marks=NA),
++                          public=list(
++                            initialize=function(x,y)
++                              {
++                              private$name=x
++                              private$marks=y
++                            } 
++                            )
++                        )
+> Marks<-mard_generator$new(c("raam","raju","ragava"),c(100,100,100))
+Error in list2env(x, envir) : first argument must be a named list
+> Marks <- mard_generator$new(c("raam","raju","ragava"),c(100,100,100))
+Error in list2env(x, envir) : first argument must be a named list
+> marks_1 <- mard_generator$new(c("john","sam","lucky","amy"),c(100,100,100,100))
+Error in list2env(x, envir) : first argument must be a named list
+> 
